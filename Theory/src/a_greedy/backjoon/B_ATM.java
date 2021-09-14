@@ -9,7 +9,7 @@ public class B_ATM {
         // TODO Auto-generated method stub
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-        int result = 0;
+        int sum = 0, result = 0;
         PriorityQueue<Integer> queue = new PriorityQueue<>();
         
         for (int i=0; i<N; i++) {
@@ -19,10 +19,9 @@ public class B_ATM {
         
         for (int i=0; i<N; i++) {
             int poll =  queue.poll();
-            System.out.println(poll +"," +result);
-            result = result + poll + poll;
+            sum = sum + poll;
+            result += sum;            
         }
-        
         System.out.println(result);
     }
 
