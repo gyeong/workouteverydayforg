@@ -9,20 +9,21 @@ public class AntWorrier {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int[] arr = new int[N];
+        int[] result = new int[N];
         for (int i=0; i<N; i++) {
             arr[i] = sc.nextInt();
         }
         
-        System.out.println(dp(N));
-    }
-    
-    public static int dp(int N) {
-        int result = 0;
-        for (int i=0; i<N; i++) {
-            
+        result[0] = arr[0];
+        result[1] = Math.max(arr[0], arr[1]);
+        
+        for (int i=2; i<N; i++) {
+            result[i] = Math.max(result[i-1], result[i-2]+arr[i]);
         }
         
-        return N;
+        System.out.println(result[N-1]);
     }
+    
+    
 
 }
