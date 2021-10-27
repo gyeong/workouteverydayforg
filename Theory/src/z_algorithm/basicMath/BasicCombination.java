@@ -11,6 +11,7 @@ class BasicCombination {
     /*
      * Task 
      * https://minhamina.tistory.com/38
+     * nCr = n-1Cr-1 + n-1Cr
      * n개의 숫자 중 r개의 숫자를 순서 상관없이 뽑는 경우의 수
      */
     @Test

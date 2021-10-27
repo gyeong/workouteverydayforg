@@ -10,8 +10,8 @@ class GcdAndGcm {
 
     /* 
      *  Task
-     *  최소공약수 : a % b -> b가 0일때까지 반복
-     *  최대공배수 : a * b / 최소공약수
+     *  최대공약수 : a % b -> b가 0일때까지 반복
+     *  최소공배수 : a * b / 최대공약수
      */
     @Test
     void test() {
@@ -21,13 +21,13 @@ class GcdAndGcm {
     }
 
     private int gcdByIteration(int i, int j) {
-        int mod;
+        int mod = 0;
         
         while (j != 0) {
             mod = i % j;
+            System.out.println(mod + " , " + i + ", " + j);
             i = j;
             j = mod;
-            System.out.println(mod + " , " + i + ", " + j);
         }
         return i;
     }
